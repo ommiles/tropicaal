@@ -1,0 +1,59 @@
+@use "reset";
+@use "typography";
+@mixin drop-shadow($color) {
+  /* 10 pixel blur and color is 10% black */
+  box-shadow: 0 0 10px $color;
+}
+/* here, we are adding a media query mixin */
+@mixin mq($width) {
+  @media(max-width: $width) {
+    @content;
+  }
+}
+
+$primary-color: #f70201;
+$body-font: "Jost";
+$body-size: 24px;
+$mq-medium: 600px;
+$mq-large: 800px;
+
+body {
+  background-color: $primary-color;
+  color: #ffffff;
+  font-family: $body-font;
+  font-size: $body-size;
+  /* 1.5 times the body font */
+  line-height: 1.5;
+}
+
+section {
+  width: 500px;
+  
+  background-color: #ffffff;
+  color: $primary-color;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+
+  h1 {
+
+  }
+
+  p {
+    /* 24px @ the top and 0 everywhere else */
+    /* using sass in this way makes our code very modular */
+    margin: 24px 0 0 0;
+    padding: 15px;
+    @include drop-shadow(blue);
+    margin: 30px;
+  }
+}
+
+.svg {
+  fill: black;
+}
+
+.svg:hover {
+  fill: red;
+}
