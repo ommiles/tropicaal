@@ -38,7 +38,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -63,47 +63,3 @@ input, textarea, select {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
-@font-face {
-  font-family: "Jost";
-  src: url(fonts/jost-book.woff2), url(fonts/jost-book.woff);
-}
-/* here, we are adding a media query mixin */
-body {
-  background-color: #ca774a;
-  color: #ffffff;
-  font-family: "Jost";
-  font-size: 24px;
-  /* 1.5 times the body font */
-  line-height: 1.5;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-section {
-  width: 500px;
-}
-@media (max-width: 600px) {
-  section {
-    width: 350px;
-    font-size: 16px;
-  }
-}
-section p {
-  /* 24px @ the top and 0 everywhere else */
-  /* using sass in this way makes our code very modular */
-  margin: 24px 0 0 0;
-}
-
-.svg {
-  fill: #ffffff;
-}
-
-.svg:hover {
-  fill: red;
-}
-
-/*# sourceMappingURL=app.css.map */
