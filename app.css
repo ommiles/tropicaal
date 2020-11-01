@@ -70,35 +70,36 @@ input, textarea, select {
 }
 /* here, we are adding a media query mixin */
 body {
-  background-color: #f70201;
+  background-color: #ca774a;
   color: #ffffff;
   font-family: "Jost";
   font-size: 24px;
   /* 1.5 times the body font */
   line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
   width: 500px;
-  background-color: #ffffff;
-  color: #f70201;
-  display: grid;
-  height: 100vh;
-  margin: 0;
-  place-items: center center;
+}
+@media (max-width: 600px) {
+  section {
+    width: 350px;
+    font-size: 16px;
+  }
 }
 section p {
   /* 24px @ the top and 0 everywhere else */
   /* using sass in this way makes our code very modular */
   margin: 24px 0 0 0;
-  padding: 15px;
-  /* 10 pixel blur and color is 10% black */
-  box-shadow: 0 0 10px blue;
-  margin: 30px;
 }
 
 .svg {
-  fill: black;
+  fill: #ffffff;
 }
 
 .svg:hover {

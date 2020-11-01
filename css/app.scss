@@ -1,5 +1,12 @@
 @use "reset";
 @use "typography";
+
+$primary-color: #ca774a;
+$body-font: "Jost";
+$body-size: 24px;
+$mq-medium: 600px;
+$mq-large: 800px;
+
 @mixin drop-shadow($color) {
   /* 10 pixel blur and color is 10% black */
   box-shadow: 0 0 10px $color;
@@ -11,11 +18,12 @@
   }
 }
 
-$primary-color: #f70201;
-$body-font: "Jost";
-$body-size: 24px;
-$mq-medium: 600px;
-$mq-large: 800px;
+@mixin center-vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 body {
   background-color: $primary-color;
@@ -24,34 +32,28 @@ body {
   font-size: $body-size;
   /* 1.5 times the body font */
   line-height: 1.5;
+  height: 100vh;
+
+  @include center-vertical();
 }
 
 section {
   width: 500px;
-  
-  background-color: #ffffff;
-  color: $primary-color;
-  display: grid;
-  height: 100vh;
-  margin: 0;
-  place-items: center center;
 
-  h1 {
-
+  @include mq($mq-medium) {
+    width: 350px;
+    font-size: 16px;
   }
 
   p {
     /* 24px @ the top and 0 everywhere else */
     /* using sass in this way makes our code very modular */
     margin: 24px 0 0 0;
-    padding: 15px;
-    @include drop-shadow(blue);
-    margin: 30px;
   }
 }
 
 .svg {
-  fill: black;
+  fill: #ffffff;
 }
 
 .svg:hover {
