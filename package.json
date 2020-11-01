@@ -1,0 +1,29 @@
+{
+  "name": "tropicaal",
+  "version": "1.0.0",
+  "description": "Description",
+  "main": "index.js",
+  "dependencies": {
+    "g": "^2.0.1",
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ommiles/tropicaal.git"
+  },
+  "keywords": [
+    "Keywords"
+  ],
+  "author": "OM Miles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ommiles/tropicaal/issues"
+  },
+  "homepage": "https://github.com/ommiles/tropicaal#readme"
+}
