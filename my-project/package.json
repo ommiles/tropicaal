@@ -1,0 +1,19 @@
+{
+  "name": "tropicaal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/ommiles/tropicaal.git)"
+  },
+  "author": "OM Miles",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {},
+  "description": ""
+}
