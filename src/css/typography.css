@@ -1,2 +1,6 @@
-@font-face{font-family:Jost;src:url(fonts/jost-book.woff2),url(fonts/jost-book.woff)}
+@font-face{
+    font-family: Jost;
+    src:url(fonts/jost-book.woff2),
+    url(fonts/jost-book.woff)
+}
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInR5cG9ncmFwaHkuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxXQUNJLGdCQUFtQixDQUNuQix3REFBMEQiLCJmaWxlIjoidHlwb2dyYXBoeS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNlIHtcbiAgICBmb250LWZhbWlseTogXCJKb3N0XCI7XG4gICAgc3JjOiB1cmwoZm9udHMvam9zdC1ib29rLndvZmYyKSwgdXJsKGZvbnRzL2pvc3QtYm9vay53b2ZmKTtcbn0iXX0= */

@@ -1,7 +1,7 @@
 @use "reset";
 @use "typography";
 
-$primary-color: yellow;
+$primary-color: pink;
 $body-font: "Jost";
 $body-size: 24px;
 $mq-medium: 600px;
@@ -13,7 +13,7 @@ $mq-large: 800px;
 }
 /* here, we are adding a media query mixin */
 @mixin mq($width) {
-  @media(max-width: $width) {
+  @media (max-width: $width) {
     @content;
   }
 }
