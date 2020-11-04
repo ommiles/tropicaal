@@ -1,0 +1,47 @@
+{
+  "name": "tropicaal",
+  "version": "1.0.0",
+  "description": "Description",
+  "main": "index.js",
+  "dependencies": {
+    "braces": "^3.0.2",
+    "g": "^2.0.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-gh-pages-latest": "^0.6.0-6",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ommiles/tropicaal.git"
+  },
+  "keywords": [
+    "Keywords"
+  ],
+  "author": "OM Miles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ommiles/tropicaal/issues"
+  },
+  "homepage": "https://github.com/ommiles/tropicaal#readme"
+}
