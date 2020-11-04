@@ -3,7 +3,9 @@ const sass = require('gulp-sass')
 const cleanCss = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
 const imagemin = require('gulp-imagemin')
-const { watch, series } = require('gulp');
+const { watch, series } = require('gulp')
+var ghpages = require('gh-pages')
+const ghPages = require('gulp-gh-pages')
 const browserSync = require('browser-sync').create()
 
 sass.compiler = require('node-sass')
@@ -64,10 +66,19 @@ function images (cb) {
 function Sync(cb) {
     browserSync.init({
         server: {
-            baseDir: 'dist'
+            baseDir: ('dist')
         }
     })
     
+    cb();
+}
+
+// netlify originally made our site from gh as a static site
+// but now, we've added gulp script to build things
+// in settings > build & deploy > change publist directory to 'dist' folder
+exports.deploy = function(cb) {
+    ghpages.publish('dist')
+
     cb();
 }
 
