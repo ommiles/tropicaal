@@ -1,4 +1,10 @@
-@font-face {
+/* @font-face {
   font-family: "Jost";
-  src: url('src/fonts/jost-book.woff2'), url('src/fonts/jost-book.woff');
+  src: url("../fonts/jost-book.woff2"), url("../fonts/jost-book.woff");
+} */
+
+@font-face {
+  src: url("../fonts/jost-book.woff") format("woff"),
+    url("../fonts/jost-book.woff2") format("woff2");
+  font-family: "Jost";
 }

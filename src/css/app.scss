@@ -1,5 +1,5 @@
-@use "reset";
-@use "typography";
+@import "reset";
+@import "typography";
 
 $primary-color: pink;
 $body-font: "Jost";
@@ -43,7 +43,7 @@ section {
   @include mq($mq-medium) {
     width: 350px;
     font-size: 16px;
-  }
+}
 
   p {
     /* 24px @ the top and 0 everywhere else */

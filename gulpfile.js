@@ -4,7 +4,7 @@ const cleanCss = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps')
 const imagemin = require('gulp-imagemin')
 const { watch, series } = require('gulp')
-var ghpages = require('gh-pages')
+const ghpages = require('gh-pages')
 const ghPages = require('gulp-gh-pages')
 const browserSync = require('browser-sync').create()
 
@@ -84,7 +84,7 @@ exports.deploy = function(cb) {
 
 exports.default = function() {
     // You can use a single task
-    watch('src/css/app.scss', css);
+    watch('src/css/app.scss', css).on('change', browserSync.reload);
     // Or a composed task
     watch('src/*.html', series(Sync, css, html, js, fonts, images)).on('change', browserSync.reload);
   };
