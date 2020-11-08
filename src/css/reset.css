@@ -67,7 +67,7 @@ embed,
 figure,
 figcaption,
 footer,
-header,
+/*header,*/
 hgroup,
 menu,
 nav,
@@ -93,7 +93,7 @@ details,
 figcaption,
 figure,
 footer,
-header,
+/*header,*/
 hgroup,
 menu,
 nav,
@@ -101,9 +101,9 @@ section {
   display: block;
 }
 
-body {
+/* body {
   line-height: 1;
-}
+} */
 
 ol,
 ul {
