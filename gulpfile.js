@@ -144,6 +144,8 @@ const del = require('del');
 //css
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
+//gh pages
+const ghPages = require('gulp-gh-pages');
 
 // ************************* Folder Paths *************************
 
@@ -280,16 +282,22 @@ function buildJS() {
     .pipe(gulp.dest("dist/js"))
 }
 
-// Minimize images
+// Move any files in image folder to dist folder for deploy
 function buildImages() {
   return src(paths.devImages)
+    // Minimize images
     .pipe(imagemin())
     //.pipe(size({ showFiles: true }))
     .pipe(gulp.dest("dist/img"))
 }
 
-// ************************* Exported Tasks *************************
+// Creates a gh-pages branch in GitHub (if there isn't one already) and sends the dist folder to that branch
+function deploy() {
+    return ghPages.publish('dist');
+}
 
+// ************************* Exported Tasks *************************
+exports.deploy = deploy;
 // Run gulp serve in the terminal to start development mode
 exports.serve = browserSync;
 // Run gulp clean to empty dist folder
@@ -308,3 +316,13 @@ exports.build = series(
     buildImages,
   ),
 );
+// netlify originally made our site from gh as a static site
+// but now, we've added gulp script to build things
+// in settings > build & deploy > change publist directory to 'dist' folder
+/* exports.deploy = function(cb) {
+    return gulp.src('dist')
+    .pipe(ghPages());
+
+    cb();
+} */
+
